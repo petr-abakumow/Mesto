@@ -20,5 +20,5 @@
 
 **GitHub Pages**
 
-* [Ссылка на GitHub Pages](https://petr-abakumow.github.io/Mesto/.)
+* [Ссылка на GitHub Pages](https://petr-abakumow.github.io/mesto/.)
 
