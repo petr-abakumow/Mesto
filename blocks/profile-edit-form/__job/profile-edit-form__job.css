@@ -1,0 +1,21 @@
+.profile-edit-form__job {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 27px auto 0;
+    width: 100%;
+    max-width: 358px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    height: 30px;
+}
+
+.profile-edit-form__job:focus {
+    outline: none;
+}
+
+.profile-edit-form__job:invalid {
+    border-bottom: 1px solid red;
+}

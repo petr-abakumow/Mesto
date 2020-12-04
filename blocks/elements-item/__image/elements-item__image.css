@@ -1,0 +1,15 @@
+.elements-item__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.elements-item__image:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}

@@ -1,0 +1,18 @@
+@import url(./__box/elements-item__box.css);
+@import url(./__image/elements-item__image.css);
+@import url(./__subtitle/elements-item__subtitle.css);
+@import url(./__title/elements-item__title.css);
+@import url(./__like/elements-item__like.css);
+@import url(./__trash/elements-item__trash.css);
+
+.elements-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    max-width: 282px;
+    max-height: 363px;
+    border-radius: 10px 10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}

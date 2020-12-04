@@ -1,0 +1,4 @@
+.profile__container-info-edit-button {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./pages/index.css">
+    <link rel="icon" href="#">
+    <script type="module" src="./scripts/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesto</title>
+</head>
+<body class="root">
+    <div class="root__container">
+        <header class="header">
+            <img src="./images/logo.svg" alt="Место" class="header__logo">
+        </header>
+        <main class="content">
+            <section class="profile">
+                <div class="profile__info">
+                    <div class="profile__image"></div>
+                    <div class="profile__form">
+                        <div class="profile__container-info-edit-button">
+                            <h1 class="profile__info-name">Жак-Ив Кусто</h1>
+                            <button class="profile__info-edit-button" aria-label="Изменить данные в профиле" type="button"></button>
+                        </div>
+                        <p class="profile__info-job">Исследователь океана</p>
+                    </div>
+                </div>
+                <button class="profile__add-button" aria-label="Добавить место" type="button"></button>
+            </section>
+            <section class="elements">
+                <ul class="elements__list"></ul>
+            </section>
+        </main>
+        <footer class="footer">
+            <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+        </footer>
+
+        <div class="popup popup-edit-form-js">
+            <div class="popup__container">
+                <button class="popup__close" type="button" aria-label="Закрыть не сохраняя изменений"></button>
+                <h3 class="popup__title">Редактировать профиль</h3>
+                <form class="profile-edit-form profile-edit-form-valid-js" method="POST" name="profileEditForm">
+                    <input id="edit-form-name" minlength="2" maxlength="40" required type="text" class="form-input-js profile-edit-form__name" placeholder="Имя" name="profileName">
+                    <span id="edit-form-name-error" class="form-span"></span>
+                    <input id="edit-form-job" minlength="2" maxlength="200" required type="text" class="form-input-js profile-edit-form__job" placeholder="О себе" name="profileJob">
+                    <span id="edit-form-job-error" class="form-span"></span>
+                    <button class="profile-edit-form__button" aria-label="Сохранить внесённые изиенения" type="submit">Сохранить</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="popup popup_add-element-js">
+            <div class="popup__container">
+                <button class="popup__close popup_add-element-close-js" type="button" aria-label="Закрыть не сохраняя изменений"></button>
+                <h3 class="popup__title">Новое место</h3>
+                <form class="profile-edit-form profile-edit-form_item-js" method="POST" name="profileEditFormItemJs">
+                    <input id="add-element-name" minlength="2" maxlength="30" required type="text" class="form-input-js profile-edit-form__name profile-edit-form__name_item-place-js" placeholder="Название" name="profileName">
+                    <span id="add-element-name-error" class="form-span"></span>
+                    <input id="add-element-link" required type="url" class=" form-input-js profile-edit-form__job profile-edit-form__job_item-link-js" placeholder="Ссылка на картинку" name="profileJob">
+                    <span id="add-element-link-error" class="form-span"></span>
+                    <button class="profile-edit-form__button profile-edit-form__button_add-element-js" disabled="true" aria-label="Сохранить внесённые изиенения" type="submit">Сохранить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup popup_image-js">
+
+        <div class="popup-image-container">
+            <button class="popup__close-image" type="button" aria-label="Закрыть картинку"></button>
+            <img src="" alt="Фото крупным планом" class="popup__image">
+            <h3 class="popup-image-container__title"></h3>
+        </div>
+
+    </div>
+
+    <template id="element-container-js">
+        <li class="elements-item">
+            <div class="elements-item__box">
+                <img class="elements-item__image" src="">
+                <button type="button" class="elements-item__trash"></button>
+            </div>
+            
+            <div class="elements-item__subtitle">
+                <h2 class="elements-item__title">Карачаевск</h2>
+                <button class="elements-item__like" aria-label="Лайкнуть место" type="button"></button>
+            </div>
+        </li>
+    </template>
+</body>
+</html>

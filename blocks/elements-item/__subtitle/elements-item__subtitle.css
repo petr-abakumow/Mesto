@@ -1,0 +1,7 @@
+.elements-item__subtitle {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0 31px 0;
+    box-sizing: border-box;
+
+}

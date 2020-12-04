@@ -1,0 +1,10 @@
+@import url(./__name/profile-edit-form__name.css);
+@import url(./__job/profile-edit-form__job.css);
+@import url(./__button/profile-edit-form__button.css);
+@import url(./__invalid/profile-edit-form__invalid.css);
+@import url(./__button/_invalid/profile-edit-form__button_invalid.css);
+
+.profile-edit-form {
+    display: flex;
+    flex-direction: column;
+}

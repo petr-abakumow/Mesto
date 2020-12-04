@@ -1,0 +1,7 @@
+@import url(./__title/popup-image-container__title.css);
+
+.popup-image-container {
+    display: flex;
+    flex-direction: column;
+    
+}
