@@ -1,12 +1,12 @@
 export class FormValidator {
     constructor(settings, formSelector) {
         this._settings = settings;
-        this._formSelector = document.querySelector(formSelector);
+        this._form = document.querySelector(formSelector);
         
-        this._input = this._formSelector.querySelector(this._settings.inputSelector);
+        this._input = this._form.querySelector(this._settings.inputSelector);
         this._inputErrorClass = this._settings.inputErrorClass
         
-        this._submitButtonSelector = this._formSelector.querySelector(this._settings.submitButtonSelector);
+        this._submitButton = this._form.querySelector(this._settings.submitButtonSelector);
         this._inactiveButtonClass = this._settings.inactiveButtonClass;
         
     }
@@ -34,12 +34,12 @@ export class FormValidator {
     }
 
     _toggleButtonState() {
-        if (this._formSelector.checkValidity()) {
-            this._submitButtonSelector.classList.remove(this._inactiveButtonClass);
-            this._submitButtonSelector.disabled = false;
+        if (this._form.checkValidity()) {
+            this._submitButton.classList.remove(this._inactiveButtonClass);
+            this._submitButton.disabled = false;
         } else {
-            this._submitButtonSelector.classList.add(this._inactiveButtonClass);
-            this._submitButtonSelector.disabled = true;
+            this._submitButton.classList.add(this._inactiveButtonClass);
+            this._submitButton.disabled = true;
         }
     }
 
@@ -47,7 +47,7 @@ export class FormValidator {
 
         this._inputElements.forEach((input) => {
             input.addEventListener('input', (e) => {
-                this._checkInputValidity(this._input);
+                this._checkInputValidity(input);
                 this._toggleButtonState();
             });
         });
@@ -56,7 +56,7 @@ export class FormValidator {
     }
 
     enableValidation() {
-        this._inputElements = Array.from(this._formSelector.querySelectorAll(this._settings.inputSelector));
+        this._inputElements = Array.from(this._form.querySelectorAll(this._settings.inputSelector));
             this._setEventListeners();
     }
 }
