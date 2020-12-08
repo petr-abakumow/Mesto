@@ -31,7 +31,7 @@ export class Card {
 
         this._image.addEventListener('click', () => this._popapOpened());
 
-        elementContainer.prepend(this._content);
+        return this._content
     };
    
 }
