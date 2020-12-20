@@ -1,8 +1,8 @@
 export class Card {
-    constructor(data, templateSelector, popupImageOpen) {
+    constructor(data, templateSelector, handleCardClick) {
        this._data = data;
        this._template = document.querySelector(templateSelector).content.querySelector('.elements-item');
-       this._popupImageOpen = popupImageOpen;
+       this._handleCardClick = handleCardClick;
     }
 
     _delete() {
@@ -14,10 +14,10 @@ export class Card {
     }
 
     _popapOpened() {
-        this._popupImageOpen(this._data);
+        this._handleCardClick(this._data);
     }
 
-    render(elementContainer) {
+    render() {
         this._content = this._template.cloneNode(true);
         this._image = this._content.querySelector('.elements-item__image');
         this._cardLike = this._content.querySelector('.elements-item__like');
